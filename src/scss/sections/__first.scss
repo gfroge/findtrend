@@ -1,0 +1,58 @@
+.start {
+    &__bg{
+        padding-top: 100px;
+        max-height: 100vh;
+        min-height: 900px;
+        height: 100vh;
+    }
+    &__info {
+        padding-top: 100px;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 700px;
+        text-align: center;
+        position: relative;
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 72px;
+        color: #fff;
+        line-height: 80.64px;
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 27px;
+        color: $GY1;
+        margin-top: 24px;
+        margin-bottom: 40px;
+    }
+    &__button {
+        color: $B;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 25.2px;
+        background-color: $GN-1;
+        padding: 16px 32px;
+        border-radius: 40px;
+        transition: all 0.3s ease 0s;
+        &:hover{
+            background-color: $GN-HOVER;
+        }
+    }
+    &__tabs {
+    }
+}
+
+.start__arrow.arrow-text {
+    color:#fff;
+    position: absolute;
+    bottom: 0;
+    right: 143px;
+    transform: rotate(5deg);
+    .arrow-text__arrow{
+        display: inline-block;
+        transform: rotate(-7deg) translateX(-28px);
+    }
+}
+

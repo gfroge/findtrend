@@ -1,0 +1,12 @@
+include __mixins.pug
+header.header 
+    .container.container--large
+        a(href="#").logo
+            include svg/Logo.svg
+        -
+            var list = [["About","#"], ["How it work","#"],
+                ["Pricing","#"],["Solution","#"], ["Features","#"]]
+        +nav-links(list, 'header__link nav-link')(class="header__links nav-list")
+        .header__login-wrap
+            a(href="").header__login.nav-link Login
+            a(href="").header__reg Register

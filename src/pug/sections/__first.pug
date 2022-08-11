@@ -1,0 +1,13 @@
+include ../__mixins.pug
+section.start
+    .start__bg.ibg
+        img(src="img/bg-full.png", alt="")
+        .container.container--small
+            .start__info 
+                h1.start__title Minimize your tabs.<br>Find the trends!
+                h4.start__subtitle Don’t let your computer memories consumes all of those browser tabs. Findtrend  let you gathers all of your favorite website into one place.
+                button.start__button 
+                    a(href="") Get Started 🔥
+                +arrow-text-bottom(`All research start from here`)(class="start__arrow") 
+            .start__tabs
+                +tab('s','Cryptopunk - Search')

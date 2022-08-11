@@ -1,0 +1,22 @@
+mixin nav-links(options, liClass)
+    ul(class!=attributes.class)
+        each item in options
+            li(class=liClass)
+                a(href=item[1])= item[0]
+
+mixin arrow-text-bottom(text) 
+    .arrow-text(class!=attributes.class) 
+        .arrow-text__text
+            =text
+        .arrow-text__arrow 
+            include svg/Arrow.svg
+
+mixin tab(iconPath, text)
+    .tab 
+        .tab__wrapper 
+            .tab__icon
+                img(src=iconPath, alt="")
+            .tab__text
+                =text 
+            .tab__cross
+                include svg/Cross.svg

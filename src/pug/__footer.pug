@@ -1,0 +1,9 @@
+include __mixins.pug
+footer.footer 
+    .container.container--large
+        a(href="#").footer__logo
+            include svg/Frame.svg
+        -
+            var list = [["Privacy Policy","#"], ["Terms and Conditions","#"],
+                ["Contact Us","#"], ["Careers","#"]]
+        +nav-links(list, 'footer__link nav-link')(class="footer__links nav-list")

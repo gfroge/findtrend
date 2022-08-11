@@ -1,0 +1,57 @@
+@font-face {
+	font-family: 'Effra';
+	src: url('../fonts/Effra_Std_Rg.eot');
+	src: local('☺'), url('../fonts/Effra_Std_Rg.woff')
+     format('woff'), 
+     url('../fonts/Effra_Std_Rg.ttf') 
+     format('truetype'), 
+     url('../fonts/Effra_Std_Rg.svg') format('svg');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Effra';
+	src: url('../fonts/Effra Bold.eot');
+	src: local('☺'), url('../fonts/Effra Bold.woff')
+     format('woff'), url('../fonts/Effra Bold.ttf') format('truetype'),
+     url('../fonts/Effra Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Effra';
+	src: url('../fonts/Effra Medium.eot');
+	src: local('☺'), url('../fonts/Effra Medium.woff')
+     format('woff'), url('../fonts/Effra Medium.ttf') format('truetype'),
+      url('../fonts/Effra Medium.svg') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Effra';
+	src: url('../fonts/Effra Heavy.eot');
+	src: local('☺'), url('../fonts/Effra Heavy.woff')
+     format('woff'), url('../fonts/Effra Heavy.ttf') format('truetype'),
+      url('../fonts/Effra Heavy.svg') format('svg');
+	font-weight: 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'GoodDog';
+	src: url('../fonts/gooddog/GoodDog New W00 Regular.eot');
+	src: local('☺'), url('../fonts/gooddog/GoodDog New W00 Regular.woff')
+     format('woff'), url('../fonts/gooddog/GoodDog New W00 Regular.ttf') format('truetype'),
+      url('../fonts/gooddog/GoodDog New W00 Regular.svg') format('svg'), url('../fonts/gooddog/GoodDog New W00 Regular.woff2')
+      format('woff2');
+	font-weight: 400;
+	font-style: normal;
+}
+
+body{
+    font-family: 'Effra', sans-serif;
+    font-weight: 400;
+}
