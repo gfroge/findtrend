@@ -1,0 +1,41 @@
+.stats {
+    background-color: #FFF;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    &__title {
+        padding: 140px 0;
+    }
+
+    &__title--grey {
+        color: $GY2;
+    }
+    &__companies-subsection{
+        padding: 140px 0;
+    }
+    &__startup {
+        text-align: center;
+        padding-bottom: 80px;
+    }
+
+    &__companies-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 32px;
+    }
+}
+.company {
+    width: 266px;
+    height: 120px;
+    background-color: $GY3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear 0s;
+    &:hover{
+        background-color: #fff;
+    }
+    img{
+        max-width: 100%;
+    }
+}

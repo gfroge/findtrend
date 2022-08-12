@@ -30,3 +30,11 @@ mixin tab(iconPath, text, className)
             .tab__cross
                 button(onclick=`closeTab('${className}')`) 
                     include svg/Cross.svg
+
+mixin company(iconPath)
+    .company(class!=attributes.class)  
+        img(src=iconPath, alt="")
+
+mixin platformRadio(iconPath) 
+    .platform 
+        img(src=iconPath, alt="")
