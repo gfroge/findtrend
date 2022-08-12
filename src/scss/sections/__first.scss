@@ -1,5 +1,5 @@
 .start {
-    &__bg{
+    &__bg {
         padding-top: 100px;
         max-height: 100vh;
         min-height: 900px;
@@ -36,23 +36,67 @@
         padding: 16px 32px;
         border-radius: 40px;
         transition: all 0.3s ease 0s;
-        &:hover{
+        &:hover {
             background-color: $GN-HOVER;
         }
     }
     &__tabs {
+        display: flex;
+        width: 100%;
+        max-width: 1076px;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 95px;
+    }
+    &__twitter {
+        position: absolute;
+        top: 13px;
+        left: 0;
+        transform: rotate(-5deg);
+        z-index: 4;
+    }
+    &__pinterest {
+        position: absolute;
+        top: 73px;
+        left: 202px;
+        transform: rotate(2deg);
+        z-index: 3;
+    }
+    &__linkedin {
+        position: absolute;
+        top: 18px;
+        left: 453px;
+        transform: rotate(-3deg);
+        z-index: 2;
+    }
+    &__dribbble {
+        position: absolute;
+        top: 76px;
+        right: 5px;
+        transform: rotate(5deg);
+        z-index: 1;
     }
 }
 
 .start__arrow.arrow-text {
-    color:#fff;
+    animation: arrow-shake 1000ms infinite;
+    animation-direction: alternate;
+    color: #fff;
     position: absolute;
     bottom: 0;
     right: 143px;
     transform: rotate(5deg);
-    .arrow-text__arrow{
+    .arrow-text__arrow {
         display: inline-block;
         transform: rotate(-7deg) translateX(-28px);
     }
 }
 
+@keyframes arrow-shake {
+    0% {
+        transform: rotate(5deg);
+    }
+    100% {
+        transform: rotate(13deg);
+    }
+}

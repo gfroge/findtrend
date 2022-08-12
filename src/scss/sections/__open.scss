@@ -1,0 +1,100 @@
+.open {
+    background-color: $GN-1;
+    padding: 140px 0;
+    // max-height: 742px;
+    color: $B; 
+    &__title {
+        font-weight: 700;
+        font-size: 72px;
+        line-height: 85px;
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__findtrend{
+        max-width: 854px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+    }
+    &__findtrend-tab-wrap {
+        border-radius: 16px;
+        background-color: $GY3;
+        width: 502px;
+        height: 202px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+
+    &__findtrend-tab {
+        pointer-events: all;
+        &.closed {
+            opacity: 1 !important;
+            pointer-events: all !important;
+        }
+        .tab__wrapper {
+            box-shadow: none;
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        svg{
+            path{fill: $B;}
+        }
+        &--1{
+            top: 66px;
+            left: 56px;
+            transform: rotate(5deg);
+            .arrow-text__arrow--top {
+                transform: rotate(175deg) translate(-20px);
+            }
+        }
+        &--2{
+            top: 50px;
+            right: 52px;
+            transform: rotate(5deg);
+            .arrow-text__arrow {
+                transform: rotate(-3deg) translate(-28px);
+            }
+        }
+    }
+    &__subtitle{
+        font-size: 18px;
+        font-weight: 400;
+        max-width: 666px;
+        line-height: 150%;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 60px;
+    }
+}
+.arrow-text {
+
+    &__arrow--top {
+    }
+
+    &__text {
+    }
+
+    &__arrow {
+    }
+}
+.tab {
+
+    &__wrapper {
+    }
+
+    &__icon {
+    }
+
+    &__text {
+    }
+
+    &__shadow {
+    }
+
+    &__cross {
+    }
+}

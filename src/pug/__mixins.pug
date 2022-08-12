@@ -11,12 +11,22 @@ mixin arrow-text-bottom(text)
         .arrow-text__arrow 
             include svg/Arrow.svg
 
-mixin tab(iconPath, text)
-    .tab 
+mixin arrow-text-top(text) 
+    .arrow-text(class!=attributes.class) 
+        .arrow-text__arrow--top 
+            include svg/Arrow.svg
+        .arrow-text__text
+            =text
+
+
+mixin tab(iconPath, text, className)
+    .tab(class=className)
         .tab__wrapper 
             .tab__icon
                 img(src=iconPath, alt="")
             .tab__text
                 =text 
+                .tab__shadow              
             .tab__cross
-                include svg/Cross.svg
+                button(onclick=`closeTab('${className}')`) 
+                    include svg/Cross.svg
