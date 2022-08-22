@@ -20,7 +20,7 @@ mixin arrow-text-top(text)
 
 
 mixin tab(iconPath, text, className)
-    .tab(class=className)
+    .tab(class=className onclick=`closeTab('${className}')`)
         .tab__wrapper 
             .tab__icon
                 img(src=iconPath, alt="")
@@ -28,7 +28,7 @@ mixin tab(iconPath, text, className)
                 =text 
                 .tab__shadow              
             .tab__cross
-                button(onclick=`closeTab('${className}')`) 
+                button
                     include svg/Cross.svg
 
 mixin company(iconPath)
@@ -38,3 +38,23 @@ mixin company(iconPath)
 mixin platformRadio(iconPath) 
     .platform 
         img(src=iconPath, alt="")
+
+mixin pricingOption(name,target,priceArr,plusesArr,BGColor,buttonBGColor)
+    .pricing-option(class=BGColor)
+        .pricing-option__wrapper
+            h3.pricing-option__name=name
+            .pricing-option__target 
+                =target
+            .pricing-option__price 
+                span.pricing-option__price-wrap.active
+                    span.pricing-option__dollars=`$${priceArr[0]}`  
+                    span.pricing-option__per-what  /Month
+                span.pricing-option__price-wrap
+                    span.pricing-option__dollars=priceArr[1]  
+                    span.pricing-option__per-what  /Year
+    
+            ul.pricing-option__pluses 
+                - for (let i=0;i<plusesArr.length;i++)
+                    li.pricing-option__plus=plusesArr[i]
+
+        button.pricing-option__start-btn(class=buttonBGColor) Start Free Trial

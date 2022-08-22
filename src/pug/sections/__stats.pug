@@ -1,10 +1,10 @@
 include ../__mixins.pug
 section.stats
     .container.container--small
-        h2.stats__title Findtrend helps you to increase your productivity and reduce your computer's memory load,
-            span.stats__title--grey an application that can fulfill your daily browsing needs. 
+        h2.stats__title.h2 Findtrend helps you to increase your productivity and reduce your computer's memory load,
+            span.stats__title--grey  an application that can fulfill your daily browsing needs. 
         .stats__companies-subsection
-            h3.stats__startup Findtrend make +1000 Startup grow
+            h3.stats__startup.h2 Findtrend make +1000 Startup grow
             .stats__companies-wrap
                 - for (let i=1;i<17;i++) 
                     +company(`img/companies/brand${i}.svg`)(class="stats__company") 

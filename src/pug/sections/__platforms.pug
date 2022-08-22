@@ -1,9 +1,13 @@
 include ../__mixins.pug
 section.platforms
-    h2.platforms__title All platform connect to Findtrend
-    .platforms__radio-wrap 
-        - for (let i=2;i<9;i++) 
-            +platformRadio(`img/platforms/social media${i}.svg`)(class="platforms__platform")
-    .platforms__content 
-    
-    button.platforms__view-btn View More Trend
+    .container.container--small
+        h2.platforms__title All platform connect to Findtrend
+        .platforms__radio-wrap 
+            - for (let i=2;i<9;i++) 
+                +platformRadio(`img/platforms/social media${i}.svg`)(class="platforms__platform")
+        .platforms__content 
+            img(src="img/posts/tweet1.jpg", alt="")
+            img(src="img/posts/tweet2.jpg", alt="")
+            img(src="img/posts/tweet1.jpg", alt="")
+        .platforms__placeholder 
+        button.platforms__view-btn View More Trend

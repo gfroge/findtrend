@@ -1,0 +1,182 @@
+.pricing {
+    background-color: $B;
+    padding: 140px 0;
+    &__title {
+        color: #fff;
+    }
+    &__switch {
+        color: $GY3;
+    }
+    &__options-wrap {
+        display: flex;
+        > div:not(:last-child) {
+            margin-right: 40px;
+        }
+    }
+}
+.switch {
+    width: 345px;
+    margin: 0 auto;
+    max-height: 132px;
+    position: relative;
+    &__wrap {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        margin-top: -34px;
+        right: -90px;
+        
+    }
+    &__period {
+        font-family: "Inter", sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        line-height: 29px;
+        transition: color 0.3s ease 0s;
+        .active {
+            color: #fff;
+        }
+    }
+
+    &__button {
+        width: 104px;
+        height: 52px;
+        display: flex;
+        align-items: center;
+        border-radius: 99px;
+        background-color: #fff;
+        padding: 8px;
+        position: relative;
+        margin: 40px 24px;
+        &.toggle{
+            div{
+                right: 8px;
+            }
+        }
+    }
+
+    &__circle {
+        right:60px;
+        position: absolute;
+        transition: all 0.3s ease 0s;
+        border-radius: 50%;
+        height: 36px;
+        width: 36px;
+        background-color: $GN-1;
+    }
+}
+.pricing-option {
+    padding: 32px;
+    width: 360px;
+    height: 640px;
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    &.white {
+        background-color: #fff;
+    }
+    &.green {
+        background-color: $GN-1;
+    }
+    &__wrapper {
+    }
+    &__name {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 36px;
+        text-transform: capitalize;
+    }
+    &__target {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        margin-top: 8px;
+    }
+    &__price {
+        &::before {
+            content: "";
+            display: block;
+            height: 1px;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.3);
+            margin-top: 32px;
+            margin-bottom: 19px;
+        }
+        margin-bottom: 32px;
+    }
+    &__price-wrap {
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.2s ease 0s;
+        &.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+    }
+    &__dollars {
+        font-size: 64px;
+        font-weight: 500;
+        line-height: 64px;
+    }
+    &__per-what {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+    &__pluses {
+    }
+    &__plus {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 18px;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        &::before {
+            display: block;
+            content: "";
+            width: 14px;
+            height: 9px;
+            background-image: url("../img/ok.svg");
+            margin-right: 13px;
+        }
+        &:not(:last-child) {
+            margin-bottom: 27px;
+        }
+    }
+    &__start-btn {
+        font-family: "Roboto", sans-serif;
+        width: 100%;
+        height: 58px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+        text-align: center;
+        transition: all 0.3s ease 0s;
+        border-radius: 29px;
+        &.green {
+            background-color: $GN-1;
+        }
+        &.black {
+            background-color: $B;
+            color: #fff;
+            transition: all 0.7s ease 0s;
+            &:hover {
+                background-color: #fff;
+                color: $B;
+            }
+        }
+        &:hover {
+            background-color: $GN-HOVER;
+        }
+    }
+}

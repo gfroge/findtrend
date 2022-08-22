@@ -1,0 +1,19 @@
+include ../__mixins.pug
+section.pricing 
+    .container.container--small
+        h2.pricing__title.h2 Get your best deal
+        .pricing__switch.switch 
+            .switch__wrap
+                span.switch__period.active Monthly 
+                button.switch__button
+                    .switch__circle
+                span.switch__period.active Yearly 
+            .switch__arrow  
+                +arrow-text-bottom('Save 10% per month')  
+        .pricing__options-wrap
+            - let pluses1 = ['Up to 5 page each group', 'Up to 10 group page','5 Days group page saved']
+            - let pluses2 = ['Up to 5 page each group', 'Download page up to 20 page','Up to 10 group page', '15 Days group page saved']
+            - let pluses3 = ['Unlimited group pages', 'Unlimited download page','Unlimited page each group', 'Customize sorting group pages','Customize group page name', '30 Days group page saved']
+                +pricingOption('personal','Special first packet for all',[8,6],pluses1,'white','green')
+                +pricingOption('regular','Recommended for personal pro',[20,15],pluses2,'green','black')
+                +pricingOption('premium','Packet for Startup & Company',[48,32],pluses3,'white','green')

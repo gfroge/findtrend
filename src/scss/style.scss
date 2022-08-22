@@ -2,7 +2,7 @@
 @import "__null-style.scss";
 //fonts
 @import "__fonts.scss";
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&family=Roboto:wght@400;700&display=swap');
 //ibg
 @import "__ibg.scss";
 //Consts============================
@@ -52,11 +52,19 @@ $GY4: #f1f1f1;
 @import "sections/__stats.scss";
 //fourth
 @import "sections/__platforms.scss";
+//fifth
+@import "sections/__pricing.scss";
 //==================================
 
 //General style
 body {
     background-color: black;
+}
+.h2{
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 76px;
+    text-align: center;
 }
 .container {
     width: 100%;
