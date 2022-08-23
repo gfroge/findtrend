@@ -569,7 +569,16 @@ body {
   position: absolute;
   top: 50%;
   margin-top: -34px;
-  right: -90px;
+  right: -85px;
+}
+.switch__arrow .arrow-text {
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
+  max-width: 60px;
+}
+.switch__arrow .arrow-text__arrow {
+  -webkit-transform: translate(-25px) rotate(-5deg);
+          transform: translate(-25px) rotate(-5deg);
 }
 .switch__period {
   font-family: "Inter", sans-serif;
@@ -738,6 +747,37 @@ body {
 }
 .pricing-option__start-btn:hover {
   background-color: #8cc83a;
+}
+
+.email {
+  text-align: center;
+  background-color: #a8ff35;
+  padding: 140px 0;
+  font-size: 72px;
+  font-weight: 900;
+  line-height: 81px;
+}
+.email__title {
+  color: black;
+}
+.email__subtitle {
+  color: #87d322;
+  margin-bottom: 40px;
+}
+.email__button {
+  padding: 16px 52px;
+  border-radius: 40px;
+  background-color: black;
+  color: #fff;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px;
+}
+.email__button:hover {
+  color: #8cc83a;
 }
 
 body {

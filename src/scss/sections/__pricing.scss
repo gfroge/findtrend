@@ -29,8 +29,14 @@
         position: absolute;
         top: 50%;
         margin-top: -34px;
-        right: -90px;
-        
+        right: -85px;
+        .arrow-text{
+            transform: rotate(7deg);
+            max-width: 60px;
+        }
+        .arrow-text__arrow{
+            transform: translate(-25px) rotate(-5deg);
+        }
     }
     &__period {
         font-family: "Inter", sans-serif;

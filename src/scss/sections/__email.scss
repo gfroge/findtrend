@@ -1,0 +1,35 @@
+.email {
+    text-align: center;
+    background-color: $GN-1;
+    padding: 140px 0;
+
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 81px;
+
+    &__title {
+        color: $B;
+    }
+
+    &__subtitle {
+        color: #87d322;
+        margin-bottom: 40px;
+    }
+
+    &__button {
+        padding: 16px 52px;
+        border-radius: 40px;
+        background-color: $B;
+        color: #fff;
+        transition: all 0.3s ease 0s;
+
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25px;
+
+        &:hover {
+            color: $GN-HOVER;
+        }
+    }
+}
