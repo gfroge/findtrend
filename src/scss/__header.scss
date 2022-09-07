@@ -72,7 +72,7 @@ html {
     }
 }
 .header__container {
-    max-width: $HEADER-CONTAINER-W;
+    max-width: $HEADER-CONTAINER-W +($HEADER-CONTAINER-RL-PADDING*2);
     padding: 0 $HEADER-CONTAINER-RL-PADDING;
     padding-right: 23px;
     margin: 0 auto;
