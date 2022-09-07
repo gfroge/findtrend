@@ -1,12 +1,21 @@
 include __mixins.pug
-header.header 
-    .container.container--large
-        a(href="#").logo
-            include svg/Logo.svg
+header.header.fixed-for-popup#header
+    .container.container--large.header__container
+        a(href="#").logo.header__logo
+            span.logo__mobile
+                include svg/logo-mobile.svg
+            span.logo__desk
+                include svg/Logo.svg
         -
-            var list = [["About","#"], ["How it work","#"],
-                ["Pricing","#"],["Solution","#"], ["Features","#"]]
-        +nav-links(list, 'header__link nav-link')(class="header__links nav-list")
+            var list = [["About","#", ".start"], ["How it work","#", ".open"],
+                ["Pricing","#",".pricing"],["Solution","#",".platforms"], ["Features","#",".stats"]]
+        
+        .header__menu.menu
+            .menu__icon 
+                button.menu__icon-svg
+            nav.menu__body
+                +nav-links(list, 'menu__link')(class=" menu__list")
         .header__login-wrap
-            a(href="").header__login.nav-link Login
-            a(href="").header__reg Register
+            a(href="#login").header__login.nav-link.link--popup Login
+            a(href="#signup").header__reg.link--popup Register
+

@@ -2,7 +2,7 @@ mixin nav-links(options, liClass)
     ul(class!=attributes.class)
         each item in options
             li(class=liClass)
-                a(href=item[1])= item[0]
+                a(href=item[1] data-goto=item[2] class="menu__link")= item[0]
 
 mixin arrow-text-bottom(text) 
     .arrow-text(class!=attributes.class) 
@@ -50,7 +50,7 @@ mixin pricingOption(name,target,priceArr,plusesArr,BGColor,buttonBGColor)
                     span.pricing-option__dollars=`$${priceArr[0]}`  
                     span.pricing-option__per-what  /Month
                 span.pricing-option__price-wrap
-                    span.pricing-option__dollars=priceArr[1]  
+                    span.pricing-option__dollars=`$${priceArr[1]}`  
                     span.pricing-option__per-what  /Year
     
             ul.pricing-option__pluses 
@@ -58,3 +58,6 @@ mixin pricingOption(name,target,priceArr,plusesArr,BGColor,buttonBGColor)
                     li.pricing-option__plus=plusesArr[i]
 
         button.pricing-option__start-btn(class=buttonBGColor) Start Free Trial
+
+
+

@@ -105,6 +105,8 @@
         margin-top: 8px;
     }
     &__price {
+        position: relative;
+        min-height: 84px;
         &::before {
             content: "";
             display: block;
@@ -117,6 +119,9 @@
         margin-bottom: 32px;
     }
     &__price-wrap {
+        position: absolute;
+        bottom: 0;
+        left: 0;
         opacity: 0;
         pointer-events: none;
         transition: all 0.2s ease 0s;

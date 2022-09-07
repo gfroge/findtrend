@@ -9,7 +9,9 @@ html(lang="en")
     body 
         include pug/__header.pug
 
-        main.main 
+        main.main
+            include pug/__login.html
+
             include pug/sections/__first.pug
 
             include pug/sections/__open.pug
@@ -23,5 +25,7 @@ html(lang="en")
             include pug/sections/__email.pug
 
         include pug/__footer.pug
-        script(src="js/ibg.js") 
+        script(src="js/ibg.js")
+        script(src="js/header.js")  
         script(src="js/script.js") 
+        script(src="js/popup.js") 

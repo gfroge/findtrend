@@ -56,6 +56,8 @@ $GY4: #f1f1f1;
 @import "sections/__pricing.scss";
 //last
 @import "sections/__email.scss";
+//popup
+@import "__login.scss";
 //==================================
 
 //General style
@@ -83,6 +85,23 @@ body {
     display: block;
     width: 170px;
     height: 41px;
+    &__mobile{
+        display: none;
+    }
+    @media (max-width: 510px) {
+        width: 40px;
+        height: 40px;
+        &__mobile{
+            svg{
+                width: 40px;
+                height: 40px;
+            }
+            display: block;
+        }
+        &__desk{
+            display: none;
+        }
+    }
 }
 .arrow-text {
     font-size: 14px;
@@ -145,5 +164,32 @@ body {
     }
     &__cross {
         margin-top: 3px;
+    }
+}
+
+.page-404{
+    text-align: center;
+    color: #fff;
+    h1{
+        margin-bottom: 40px;
+    }
+}
+
+.num-404{
+    font-size: 70px;
+    margin-top: 100px;
+}
+
+.link-404{
+    color: $B;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25.2px;
+    background-color: $GN-1;
+    padding: 16px 32px;
+    border-radius: 40px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+        background-color: $GN-HOVER;
     }
 }

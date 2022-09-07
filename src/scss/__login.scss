@@ -1,0 +1,154 @@
+.popup {
+    font-size: 22px;
+
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.65);
+    top: 0;
+    left: 0;
+    z-index: 20000;
+    transition: all 0.3s ease 0s;
+    overflow-y: auto;
+    overflow-x: hidden;
+    &.open{
+        opacity: 1;
+        visibility: visible;
+        & .popup__content{
+            top: 0;
+        }
+    }
+    &__body {
+        cursor: pointer;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+        background-color: #000;
+        border: 1px solid #fff;
+        color: $GN-1;
+        max-width: 400px;
+        min-width: 300px;
+        width: 70%;
+        border-radius: 10px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        top: -100vh;
+        transition: all 0.5s ease 0s;
+    }
+    &__close{
+        align-self: end;
+        z-index: 5;
+        display: block;
+        position: relative;
+        width: 28px;
+        height: 20px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            left: 0;
+            position: absolute;
+            height: 10%;
+            width: 100%;
+            background-color: $GN-1;
+            content: "";
+        }
+        &::before {
+            top: 50%;
+            transform: rotate(-45deg);
+        }
+        &::after {
+            top: 50%;
+            transform: rotate(45deg);
+        }
+    }
+    &__title {
+        align-self: center;
+        font-weight: bold;
+    }
+
+    &__login-form {
+        label, input {
+            display: block;
+        }
+    }
+}
+
+.login-form {
+
+    &__input {
+        font-size: 18px;
+        color: #fff;
+        font-style: italic;
+        padding-bottom: 3px;
+        padding-top: 7px;
+        background-color: transparent;
+        &:focus{
+            font-style: normal;
+            color: $GN-1;
+            &::placeholder{
+                color: transparent;
+            }
+        }
+    }
+    &__submit{
+        border: 1px solid #000;
+        padding: 5px 50px;
+        border-radius: 10px;
+        transition: all 0.3s ease 0s;
+    }
+    &__item {
+        margin-top: 35px;
+        &--input{
+            border-bottom: 2px solid $GN-1;
+        }
+        &--submit{
+            margin-top: 30px;
+            align-self: center;
+            text-align: center;
+            &:hover .login-form__submit{
+                color: #fff;
+                background-color: $GN-1;
+                border: 1px solid $GN-1;
+            }
+        }
+        &--add{
+            margin-top: 5px;
+            a{
+                font-weight: 500;
+                font-size: 18px;
+                color: rgb(184, 184, 184);
+                font-style: italic;
+                text-decoration: underline;
+                text-decoration-color: transparent;
+                transition: text-decoration-color 0.3s ease 0s;
+                &:hover{
+                    text-decoration-color: rgb(184, 184, 184);
+                }
+            }
+        }
+    }
+    // &__pass{
+
+    // }
+    &__signup{
+        margin-top: 50px;
+        a{
+            font-style: normal;
+        }    
+    } 
+    // &__input-context {
+    // }
+}
+body.popup-lock{
+    overflow: hidden;
+}
