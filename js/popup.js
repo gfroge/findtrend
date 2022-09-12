@@ -22,7 +22,7 @@ if (popupCloseLinks.length > 0) {
         const link = popupCloseLinks[i];
         link.addEventListener('click', function (e) {
             closePopup(link.closest('.popup'));
-            link.preventDefault();
+            e.preventDefault();
         });
     }
 }
