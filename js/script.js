@@ -44,18 +44,40 @@ pricingSwitch.addEventListener('click', function (e) {
 const platformsArr = Array.from(document.querySelectorAll('.platform'));
 const content = document.querySelector('.platforms__content');
 const placeholder = document.querySelector('.platforms__placeholder');
+// highlight twitter (default screen)
+platformsArr.forEach(platform => {
+    if (platform.children[0].getAttribute("src").includes('7')) {
+        platform.classList.add('active');
+        content.classList.add('active');
+        placeholder.classList.remove('active')
+    }
+})
+
+// show placeholder on click
 platformsArr.forEach(platform => {
     platform.addEventListener('click', function (e) {
-        alert()
-        if (platform.getAttribute("href").includes('7')) {
-            if (!content.classList.contains('active')) {
+        // if it is twitter
+        if (platform.children[0].getAttribute("src").includes('7')) {
+            // do smth if it is not active only
+            if (!platform.classList.contains('active')) {
+                removeActivePlatformClass(platformsArr);
+                platform.classList.add('active');
                 content.classList.add('active');
                 placeholder.classList.remove('active')
             }
-            else{
-                content.classList.remove('active');
-                placeholder.classList.add('active');
-            }
+        }
+        else {
+            removeActivePlatformClass(platformsArr);
+            platform.classList.add('active');
+            placeholder.classList.add('active');
+            content.classList.remove('active');
         }
     });
 });
+
+// remove active clsss names
+function removeActivePlatformClass (arr) {
+    arr.forEach(platform => {
+        platform.classList.remove("active");
+    })
+}

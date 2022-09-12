@@ -2,7 +2,7 @@ mixin nav-links(options, liClass)
     ul(class!=attributes.class)
         each item in options
             li(class=liClass)
-                a(href=item[1] data-goto=item[2] class="menu__link")= item[0]
+                a(href=item[1] data-goto=item[2] class=liClass)= item[0]
 
 mixin arrow-text-bottom(text) 
     .arrow-text(class!=attributes.class) 
@@ -36,7 +36,7 @@ mixin company(iconPath)
         img(src=iconPath, alt="")
 
 mixin platformRadio(iconPath) 
-    .platform 
+    .platform
         img(src=iconPath, alt="")
 
 mixin pricingOption(name,target,priceArr,plusesArr,BGColor,buttonBGColor)

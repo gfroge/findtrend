@@ -3,6 +3,15 @@
 
     &__title {
         padding: 140px 0;
+        @media (max-width: 1000px) {
+            padding: 60px 0;
+            font-size: 40px !important;
+            line-height: 1.3 !important;
+        }
+        @media (max-width: 530px) {
+            font-size: 36px !important;
+            padding: 40px 0;
+        }
     }
 
     &__title--grey {
@@ -10,19 +19,57 @@
     }
     &__companies-subsection{
         padding: 140px 0;
+        @media (max-width: 1000px) {
+            padding: 40px 0;
+        }
     }
     &__startup {
         text-align: center;
         padding-bottom: 80px;
+        @media (max-width: 1000px) {
+            padding-bottom: 40px;
+            font-size: 40px !important;
+            line-height: 1.3 !important;
+        }
+        @media (max-width: 530px) {
+            font-size: 36px !important;
+        }
     }
 
     &__companies-wrap {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 32px;
+        margin: 0 auto;
+        @media (max-width: 1200px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 862px;
+            gap: 15px;
+        }
+        @media (max-width: 890px) {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            max-width: 693px;
+        }
+        @media (max-width: 730px) {
+            grid-template-columns: 1fr 1fr 1fr;
+            max-width: 516px;
+        }
+        @media (max-width: 550px) {
+            grid-template-columns: 1fr 1fr;
+            gap: 9px;
+            max-width: 354px;
+        }
+        @media (max-width: 370px) {
+            gap: 15px;
+            max-width: 300px;
+        }
     }
 }
 .company {
+    @media (max-width: 1200px) {
+        margin: 0 auto;
+    }
+    border-radius: 10px;
     width: 266px;
     height: 120px;
     background-color: $GY3;
@@ -36,4 +83,15 @@
     img{
         max-width: 100%;
     }
+    @media (max-width: 890px) {
+        width: 162px;
+        height: 74px;
+        padding: 25px;
+    }
+    @media (max-width: 370px) {
+        width: 142px;
+        height: 54px;
+        padding: 15px;
+    }
 }
+

@@ -2,7 +2,7 @@
     background-color: $GN-1;
     padding: 140px 0;
     // max-height: 742px;
-    color: $B; 
+    color: $B;
     &__title {
         font-weight: 700;
         font-size: 72px;
@@ -10,7 +10,7 @@
         text-align: center;
         margin-bottom: 60px;
     }
-    &__findtrend{
+    &__findtrend {
         max-width: 854px;
         width: 100%;
         margin: 0 auto;
@@ -38,12 +38,14 @@
         }
     }
 
-    &__arrow{
+    &__arrow {
         position: absolute;
-        svg{
-            path{fill: $B;}
+        svg {
+            path {
+                fill: $B;
+            }
         }
-        &--1{
+        &--1 {
             top: 66px;
             left: 56px;
             transform: rotate(5deg);
@@ -51,7 +53,7 @@
                 transform: rotate(175deg) translate(-20px);
             }
         }
-        &--2{
+        &--2 {
             top: 50px;
             right: 52px;
             transform: rotate(5deg);
@@ -60,7 +62,7 @@
             }
         }
     }
-    &__subtitle{
+    &__subtitle {
         font-size: 18px;
         font-weight: 400;
         max-width: 666px;
@@ -70,31 +72,119 @@
         margin-top: 60px;
     }
 }
-.arrow-text {
 
-    &__arrow--top {
-    }
+@media (max-width: 1000px) {
+    .open {
+        padding: 80px 0;
+        &__title {
+            font-size: 56px;
+        }
 
-    &__text {
-    }
-
-    &__arrow {
+        &__subtitle {
+            max-width: 600px;
+        }
     }
 }
-.tab {
+@media (max-width: 650px) {
+    .open {
+        &__title {
+            margin-bottom: 80px;
+        }
+        &__findtrend {
+            width: 340px;
+        }
+        &__findtrend-tab-wrap {
+            width: 339px;
+            height: 118px;
+            border-radius: 14px;
+        }
 
-    &__wrapper {
+
+        &__arrow {
+            svg {
+                path {
+                }
+            }
+            &--1 {
+                transform: translate(-80px, 40px);
+                .arrow-text__arrow--top {
+                    transform: rotate(156deg) translate(-15px);
+                }
+            }
+            &--2 {
+                transform: translate(20px, -125px);
+                .arrow-text__arrow {
+                    transform: rotate(120deg) translate(15px, 10px) scaleX(-1);
+                }
+            }
+        }
+        &__subtitle {
+            max-width: 300px;
+            margin-top: 80px;
+        }
     }
-
-    &__icon {
+}
+@media (max-width: 580px) {
+    .open {
+        &__title {
+            font-size: 36px;
+        }
     }
+}
+@media (max-width: 400px) {
+    .open {
+        padding: 40px 0;
 
-    &__text {
+        &__arrow {
+            &--1 {
+                transform: translate(-50px, 40px);
+                .arrow-text__arrow--top {
+                    transform: rotate(156deg) translate(-15px);
+                }
+            }
+            &--2 {
+                transform: translate(20px, -125px);
+                .arrow-text__arrow {
+                    transform: rotate(120deg) translate(15px, 10px) scaleX(-1);
+                }
+            }
+        }
     }
+}
+@media (max-width: 380px) {
+    .open {
+        &__title {
+            line-height: 1;
+            margin-bottom: 90px;
+        }
+        &__findtrend {
+            width: 300px;
+            max-width: 300px;
+        }
+        &__findtrend-tab-wrap {
+            width: 300px;
+            max-width: 300px;
+            height: auto;
+            
+        }
 
-    &__shadow {
-    }
 
-    &__cross {
+        &__arrow {
+            &--1 {
+                transform: translate(-50px, 28px);
+                .arrow-text__arrow--top {
+                    transform: rotate(156deg) translate(-15px);
+                }
+            }
+            &--2 {
+                transform: translate(20px, -125px);
+                .arrow-text__arrow {
+                    transform: rotate(120deg) translate(15px, 10px) scaleX(-1);
+                }
+            }
+        }
+        &__subtitle {
+            margin-top: 120px;
+        }
     }
 }

@@ -1,13 +1,47 @@
-.footer{
+.footer {
     background-color: #fff;
-    .container{
+    .container {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 30px;
         padding-bottom: 30px;
+        max-height: 100px;
     }
-    &__link{
-        color: $B
+    &__links {
+        display: flex;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 100%;
+    }
+    &__link {
+        color: #000;
+        transition: color 0.3s ease 0s;
+        &:not(:last-child) {
+            @media(min-width: 821px){
+                margin-right: 40px;
+            }
+        }
+        &:hover {
+            color: $GN-HOVER;
+        }
+    }
+}
+@media (max-width: 820px) {
+    .footer {
+        .container {
+            flex-direction: column;
+            text-align: center;
+            max-height:none;
+        }
+        &__links {
+            margin-top: 50px;
+            flex-direction: column;
+        }
+        &__link {
+            &:not(:last-child) {
+                margin-bottom: 40px;
+            }
+        }
     }
 }

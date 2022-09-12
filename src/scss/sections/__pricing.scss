@@ -1,8 +1,23 @@
 .pricing {
     background-color: $B;
     padding: 140px 0;
+    @media (max-width: 1200px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 1000px) {
+        padding: 40px 0;
+    }
+    @media (max-width: 400px) {
+        padding: 30px 0;
+    }
     &__title {
         color: #fff;
+        @media (max-width: 1000px) {
+            font-size: 44px !important;
+        }
+        @media (max-width: 400px) {
+            font-size: 36px !important;
+        }
     }
     &__switch {
         color: $GY3;
@@ -11,6 +26,34 @@
         display: flex;
         > div:not(:last-child) {
             margin-right: 40px;
+            @media (max-width: 1200px) {
+                margin-right: 5px;
+            }
+            @media (max-width: 1000px) {
+                margin-right: 10px;
+                margin-bottom: 10px;
+            }
+            @media (max-width: 710px) {
+                margin: 0;
+                margin-bottom: 20px;
+            }
+        }
+        > div:nth-child(2) {
+            @media (max-width: 1000px) {
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 1200px) {
+            justify-content: space-between;
+        }
+        @media (max-width: 1000px) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        @media (max-width: 710px) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }
@@ -19,28 +62,52 @@
     margin: 0 auto;
     max-height: 132px;
     position: relative;
+    @media (max-width: 580px) {
+        margin-bottom: 60px;
+    }
+    @media (max-width: 400px) {
+        margin-bottom: 45px;
+    }
     &__wrap {
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
+        @media (max-width: 360px) {
+            max-width: 300px;
+            margin: 0 auto;
+        }
+        @media (max-width: 340px) {
+            max-width: 300px;
+            margin: 0;
+        }
     }
-    &__arrow{
+    &__arrow {
         position: absolute;
         top: 50%;
         margin-top: -34px;
         right: -85px;
-        .arrow-text{
+        @media (max-width: 580px) {
+            margin-top: 50px;
+            right: 48px;
+        }
+        .arrow-text {
             transform: rotate(7deg);
             max-width: 60px;
         }
-        .arrow-text__arrow{
+        .arrow-text__arrow {
             transform: translate(-25px) rotate(-5deg);
+            @media (max-width: 580px) {
+                transform: translate(-10px, -65px) rotate(9deg) scaleY(-1);
+            }
         }
     }
     &__period {
         font-family: "Inter", sans-serif;
         font-size: 24px;
+        @media (max-width: 400px) {
+            font-size: 18px;
+        }
         font-weight: 500;
         line-height: 29px;
         transition: color 0.3s ease 0s;
@@ -52,6 +119,9 @@
     &__button {
         width: 104px;
         height: 52px;
+        @media (max-width: 400px) {
+            height: 44px;
+        }
         display: flex;
         align-items: center;
         border-radius: 99px;
@@ -59,15 +129,15 @@
         padding: 8px;
         position: relative;
         margin: 40px 24px;
-        &.toggle{
-            div{
+        &.toggle {
+            div {
                 right: 8px;
             }
         }
     }
 
     &__circle {
-        right:60px;
+        right: 60px;
         position: absolute;
         transition: all 0.3s ease 0s;
         border-radius: 50%;
@@ -79,7 +149,14 @@
 .pricing-option {
     padding: 32px;
     width: 360px;
-    height: 640px;
+    min-height: 640px;
+    @media (max-width: 1200px) {
+        width: 339px;
+        min-height: 602px;
+    }
+    @media (max-width: 360px) {
+       max-width: 300px;
+    }
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -141,6 +218,7 @@
         line-height: 18px;
     }
     &__pluses {
+        margin-bottom: 15px;
     }
     &__plus {
         font-size: 18px;

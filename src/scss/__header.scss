@@ -130,7 +130,7 @@ html {
         }
     }
 }
-@media (min-width: $MOBILE-BREAKPOINT) {
+@media (min-width: (1px + $MOBILE-BREAKPOINT)) {
     .menu__body {
         padding-top: 12px;
     }

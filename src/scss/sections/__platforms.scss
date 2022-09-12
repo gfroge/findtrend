@@ -1,43 +1,88 @@
 .platforms {
     padding: 140px 0;
-    background-color: #FAFAFA;
+    @media (max-width: 1030px) {
+        padding: 60px 0;
+    }
+    @media (max-width: 400px) {
+        padding: 35px 0;
+    }
+    background-color: #fafafa;
     text-align: center;
     &__title {
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: bold;
         font-size: 64px;
         margin-bottom: 80px;
+        @media (max-width: 1000px) {
+            font-size: 44px;
+            margin-bottom: 40px;
+        }
+        @media (max-width: 630px) {
+            font-size: 36px;
+            margin-bottom: 27px;
+        }
     }
     &__radio-wrap {
         display: flex;
         justify-content: space-between;
         margin-bottom: 77px;
+        @media (max-width: 860px) {
+            margin-bottom: 35px;
+        }
+        @media (max-width: 630px) {
+            padding-bottom: 10px;
+            overflow-x: auto;
+        }
     }
 
     &__content {
         margin: 0 auto;
         max-width: 800px;
-        img:not(:last-child){
+        img {
+            max-width: 100%;
+        }
+        img:not(:last-child) {
             margin-bottom: 40px;
         }
-        img:last-child{
+        img:last-child {
             margin-bottom: 80px;
+            @media (max-width: 630px) {
+                margin-bottom: 50px;
+            }
+        }
+        display: none;
+        &.active {
+            display: block;
         }
     }
 
     &__placeholder {
+        display: none;
+        &.active {
+            display: block;
+        }
+        margin: 0 auto;
+        max-width: 800px;
+        margin-bottom: 80px;
+        background-color: $GY2;
+        border-radius: 10px;
+        height: 500px;
+        font-size: 40px;
+        color: $GN-1;
+        text-align: center;
+        padding-top: 45px;
     }
 
     &__view-btn {
         padding: 16px 32px;
         font-size: 18px;
-        font-family: 'Roboto', sans-serif;
+        font-family: "Roboto", sans-serif;
         font-weight: bold;
         background-color: $B;
         color: #fff;
         border-radius: 40px;
         transition: all 0.3s ease 0s;
-        &:hover{
+        &:hover {
             color: $GN-HOVER;
         }
     }
@@ -52,10 +97,38 @@
     background-color: #fff;
     transition: all 0.3s ease 0s;
     cursor: pointer;
-    &:hover{
+    &:hover {
         background-color: rgb(194, 194, 194);
     }
-    &.active{
+    &.active {
         background-color: $GN-1;
+    }
+    @media (max-width: 1030px) {
+        width: 110px;
+        height: 110px;
+        padding: 16px;
+        img {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 860px) {
+        width: 80px;
+        height: 80px;
+        padding: 16px;
+        img {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 630px) {
+        width: 64px;
+        height: 64px;
+        img {
+            max-width: none;
+            width: 31px;
+            height: 31px;
+        }
+        &:not(:last-child) {
+            margin-right: 16px;
+        }
     }
 }
